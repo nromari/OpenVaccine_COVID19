@@ -1,0 +1,9 @@
+README.md
+setup.py
+RiboGraphViz/RG_utils.py
+RiboGraphViz/RiboGraphViz.py
+RiboGraphViz/__init__.py
+RiboGraphViz.egg-info/PKG-INFO
+RiboGraphViz.egg-info/SOURCES.txt
+RiboGraphViz.egg-info/dependency_links.txt
+RiboGraphViz.egg-info/top_level.txt
