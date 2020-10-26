@@ -8,7 +8,7 @@ def display_circles(pcs, n_comp, pca, axis_ranks, labels=None, label_rotation=0,
         if d2 < n_comp:
 
             # initialisation de la figure
-            fig, ax = plt.subplots(figsize=(7,6))
+            fig, ax = plt.subplots(figsize=(18,15))
 
             # détermination des limites du graphique
             if lims is not None :
@@ -23,7 +23,7 @@ def display_circles(pcs, n_comp, pca, axis_ranks, labels=None, label_rotation=0,
             if pcs.shape[1] < 30 :
                 plt.quiver(np.zeros(pcs.shape[1]), np.zeros(pcs.shape[1]),
                    pcs[d1,:], pcs[d2,:], 
-                   angles='xy', scale_units='xy', scale=1, color="grey")
+                   angles='xy', scale_units='xy', scale=0.6, color="grey")
                 # (voir la doc : https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html)
             else:
                 lines = [[[0,0],[x,y]] for x,y in pcs[[d1,d2]].T]
@@ -33,7 +33,7 @@ def display_circles(pcs, n_comp, pca, axis_ranks, labels=None, label_rotation=0,
             if labels is not None:  
                 for i,(x, y) in enumerate(pcs[[d1,d2]].T):
                     if x >= xmin and x <= xmax and y >= ymin and y <= ymax :
-                        plt.text(x, y, labels[i], fontsize='14', ha='center', va='center', rotation=label_rotation, color="blue", alpha=0.5)
+                        plt.text(x, y, labels[i], fontsize='12', ha='center', va='center', rotation=label_rotation, color="blue", alpha=0.5)
             
             # affichage du cercle
             circle = plt.Circle((0,0), 1, facecolor='none', edgecolor='b')
@@ -59,7 +59,7 @@ def display_factorial_planes(X_projected, n_comp, pca, axis_ranks, labels=None, 
         if d2 < n_comp:
  
             # initialisation de la figure       
-            fig = plt.figure(figsize=(7,6))
+            fig = plt.figure(figsize=(12,10))
         
             # affichage des points
             if illustrative_var is None:
