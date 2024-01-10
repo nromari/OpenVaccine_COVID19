@@ -1,3 +1,9 @@
+Choix du candidat vaccin ARN Covid19 le plus stable par modélisation des données de séquençage.
+- Utilisation duu package RiboGraphViz
+- Exploration et caractérisation des séquences candidates
+- 
+
+
 # RiboGraphViz
 
 Visualize global properties of large RNAs using force-directed layout from GraphViz.
